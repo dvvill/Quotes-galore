@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from display_quotes.views import GetQuotes
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', GetQuotes.as_view(template_name='quotes.html'), name='Quote View'),
 ]
