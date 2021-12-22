@@ -15,10 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from display_quotes.views import GetQuotes
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('admin_user.urls'))
-    path('quote-view/', GetQuotes.as_view(template_name='quotes.html'), name='quote-view'),
 ]
